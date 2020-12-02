@@ -54,7 +54,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             String title = data.getString("title");
             String message = data.getString("message");
             String imageUrl = data.getString("image");
-           // String imageUrl= "https://ailyan.fr/upload/1344253554";
+            // String imageUrl= "https://ailyan.fr/upload/1344253554";
 
             //creating MyNotificationManager object
             MyNotificationManager mNotificationManager = new MyNotificationManager(getApplicationContext());
@@ -73,7 +73,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 mNotificationManager.showBigNotification(title, message, imageUrl, intent);
             }
 
-          //  mNotificationManager.showBigNotification(title, message, imageUrl, intent);
+            //  mNotificationManager.showBigNotification(title, message, imageUrl, intent);
 
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -85,13 +85,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 mChannel.enableLights(true);
                 mChannel.setLightColor(Color.RED);
 
-           //     mChannel.enableVibration(true);
-         //       mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+                //     mChannel.enableVibration(true);
+                //       mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
 
 
                 // Generate Sound For Notifications
                 Uri soundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"+ getApplicationContext().getPackageName() + "/" + R.raw.v1);
-          //      mChannel.setSound(null,null);
+                //      mChannel.setSound(null,null);
                 AudioAttributes audioAttributes = new AudioAttributes.Builder()
                         .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                         .setUsage(AudioAttributes.USAGE_NOTIFICATION)
@@ -99,7 +99,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 mChannel.setSound(soundUri, audioAttributes);
                 mNotificationManager1.createNotificationChannel(mChannel);
             }
-      //      Intent notificationIntent =new Intent(getApplicationContext(),MainActivity.class);
+            //      Intent notificationIntent =new Intent(getApplicationContext(),MainActivity.class);
 
             MyNotificationManagerTest.getInstance(getApplicationContext()).displayNotification(title, message);
 
@@ -107,9 +107,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
          /*   Notifications notif=new Notifications();
             notif.infoDialog(getApplicationContext(),title,message);  */
 
-         //   MainActivity mainActivity= new MainActivity();
-         //   Notifications notif=new Notifications();
-         //  notif.infoDialog(getApplicationContext(),title,message);
+            //   MainActivity mainActivity= new MainActivity();
+            //   Notifications notif=new Notifications();
+            //  notif.infoDialog(getApplicationContext(),title,message);
 
 
         } catch (JSONException e) {

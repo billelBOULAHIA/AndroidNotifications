@@ -55,16 +55,16 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/buttonSendNotification" />  -->
 
-      <!--  <Button
-            android:id="@+id/diplayQuizz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonRegister"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
-            android:textSize="30dp"
-            android:text="Quizz" /> -->
+        <!--  <Button
+              android:id="@+id/diplayQuizz"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/buttonRegister"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginTop="10dp"
+              android:textSize="30dp"
+              android:text="Quizz" /> -->
 
         <!--
         <Button
